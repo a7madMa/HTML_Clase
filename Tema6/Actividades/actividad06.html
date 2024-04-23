@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 6</title>
+</head>
+
+<body>
+    <h1>Actividad 6</h1>
+    <p>Escribe un programa que solicite una nota (numérica), y devuelva un
+        mensaje de valoración de la nota, por ejemplo: Si se introduce un 3, se puede
+        mostrar el mensaje en la consola: «la nota 3 es muy insuficiente», si se introduce un
+        7, el mensaje podría ser: «El 7 es un notable bajo», etc.</p>
+    <script>
+        let nota = prompt("Escribe una nota:");
+
+        if (nota <= 3) {
+            console.log("la nota " + nota + " es muy Insuficiente")
+        } else if (nota == 5) {
+
+            console.log("la nota " + nota + " es un Suficiente")
+        } else if (nota == 6) {
+
+            console.log("la nota " + nota + " es un Bien")
+        } else if (nota <= 7) {
+
+            console.log("El " + nota + " es un Notable bajo")
+        } else if (nota == 8) {
+
+            console.log("El " + nota + " es un Notable alto")
+        } else {
+
+            console.log("la nota " + nota + " es Sobresaliente")
+        }
+    </script>
+
+</body>
+
+</html>
