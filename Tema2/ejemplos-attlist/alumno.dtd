@@ -1,0 +1,7 @@
+<!ELEMENT alumno (nombre, apellidos)>
+<!ATTLIST alumno nivel CDATA #REQUIRED> <!--  #implied es que puede aparecer o no y seguira funcionando -->
+<!ATTLIST alumno grupo (A|B|C|D) #REQUIRED>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+

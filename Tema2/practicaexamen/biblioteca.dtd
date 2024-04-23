@@ -1,0 +1,20 @@
+<!ELEMENT biblioteca (libro+, autor+)>
+
+<!ELEMENT libro (titulo, consulta? ,editorial, idioma)>
+<!ATTLIST libro isbn NMTOKEN #IMPLIED>
+<!ATTLIST libro autores IDREFS #IMPLIED>
+
+<!ELEMENT titulo (categoria?)>
+
+<!ATTLIST titulo categoria (INFANTIL|JUVENIL|ADULTO|TECNICO) #IMPLIED>
+
+<!ELEMENT categoria (#PCDATA)>
+<!ELEMENT consulta EMPTY>
+<!ELEMENT editorial (#PCDATA)>
+<!ELEMENT idioma (#PCDATA)>
+
+<!ELEMENT autor (nombre,(nacionalidad |pais))*>
+<!ATTLIST autor codigo ID #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT nacionalidad (#PCDATA)>

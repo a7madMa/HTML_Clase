@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 1</title>
+
+    <style>
+        /* Aplicamos color rojo a los span que se encuentren dentro de un p */
+
+        p span {
+            color: red;
+        }
+
+        .color_rgb {
+            background-color: rgb(30, 200, 70);
+        }
+
+        div {
+            width: 200px;
+            height: 100px;
+        }
+
+        div.transparencia {
+            background: color #7715d333;
+            ;
+        }
+
+        div.color_hsl {
+            background-color: hsl(120, 100%, 50%);
+        }
+
+        div.opacidad {
+            background-color: rgb(169, 169, 231);
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Ejemplo 1</h1>
+
+    <p>En este ejemplo <span>aplicamos estilo</span> a los span que estén dentro de p</p>
+
+    Fuera de las etiquetas p , el span no hace nada. <br> <br>
+
+
+    <p class="color_rgb">Este párrado va a terner un color de fondo formado por las componentes RGB 30, 200, 70</p>
+
+    <div class="transparencia">
+        Esto es un div con un color de fondo y algo de
+        transparencia
+    </div>
+
+    <div class="color_hsl">
+        Este div usa hsl con transparencia
+    </div>
+
+    <div class="opacidad">
+        Este div usa la propiedad transparencia.
+
+    </div>
+
+</body>
+
+</html>

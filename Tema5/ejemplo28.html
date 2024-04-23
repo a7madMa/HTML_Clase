@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 28</title>
+    <style>
+        .contenedor-flex {
+            border: 2px solid brown;
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+        }
+
+        .item-felx {
+            border: 2px solid greenyellow;
+            font-size: 5rem;
+            text-align: center;
+            padding: 20px;
+            width: 100px;
+            flex-grow: 1;
+            flex-shrink: 2;
+
+        }
+
+        .item-felx:first-child {
+            flex-basis: 300px;
+        }
+
+        .item-felx:nth-child(2) {}
+
+        h2 {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flexbox</h1>
+
+    <div class="contenedor-flex">
+        <div class="item-felx">
+            1
+        </div>
+        <div class="item-felx">
+            2
+        </div>
+        <div class="item-felx">
+            3
+
+        </div>
+
+</body>
+
+</html>

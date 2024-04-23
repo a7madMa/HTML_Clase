@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 2</title>
+</head>
+
+<body>
+
+    <h1>EL DOM</h1>
+    <h2 id="encabezado">Encabezado temporal</h2>
+
+    <p>Éste es el parrafo 1 </p>
+    <p>Éste es el parrafo 2 </p>
+    <p>Éste es el parrafo 3 </p>
+    <script>
+        "use strict"
+        document.getElementById("encabezado");
+        encabezado.innerHTML = "Modificamos este h2 desde JavaScript";
+
+        // Seleccionamos todos los párrafos obteniendo un arry de elementos "p".
+        let parrafos = document.getElementsByTagName("p");
+        parrafos[0].innerHTML = "Este párrafo ha cambiado con JavaScript";
+
+
+        // Recorremos el array y cambiamos el contenido de cada párrafo.
+        for (let parrafo of parrafos) {
+            parrafo.innerHTML = "Contenido nuevo";
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

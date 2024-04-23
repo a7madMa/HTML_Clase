@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 1</title>
+</head>
+
+<body>
+
+    <h1>JavaScript</h1>
+    <p id="texto"></p>
+
+    <script>
+        "use strict"
+
+        let alumno = {
+            nombre: "Carlos",
+            apellidos: "Soler Fernández",
+            numero: 20,
+            fechaNacimiento: "2000-10-10",
+            getFechaNacimiento: function () {
+                return this.fechaNacimiento;
+            }
+
+        };
+
+        console.log("Nombre: " + alumno.nombre);
+        console.log("Fecha de nacimiento " + alumno.getFechaNacimiento());
+
+        const coches = ['Seat', 'Volvo', 'Volkswagen'];
+        console.log(coches[1]);
+
+        coches[3] = 'Renault';
+        console.log(coches[3]);
+
+
+        // Ejemplo de == e ===,
+
+        let a = 1;
+        let b = "1";
+
+        console.log(a == b);
+        console.log(a === b);
+
+        console.log("5" + 2 + 3);
+
+        function multiplicar(num1, num2) {
+            return num1 * num2;
+        }
+
+        console.log(multiplicar(5, 6));
+
+
+        // Ejmplo de for
+        console.log('Tabla del "8"');
+        for (let i = 1; i <= 10; i++) {
+            console.log("8 x " + i + " = " + 8 * i);
+        }
+
+        // Ejemplo de for in
+
+        let cancion = {
+            titulo: "Carmina Buran",
+            autor: "Karl Orf",
+            duración: "180"
+        };
+
+        console.log("Valores del objeto canción");
+        for (let valor in cancion) {
+            console.log(valor);
+            console.log(cancion[valor])
+        }
+
+        // Ejemplo de bucle for of.
+
+        let nombres = ['Luis', 'María', 'Natalia', 'Joaquín'];
+
+        console.log("Nombres guardados en el array:")
+
+        for (let nombre of nombres) {
+            console.log(nombre);
+        }
+
+
+        // Ejemplo de método forEach().
+
+        console.log("Nombres mostrados con el método forEach():")
+        nombres.forEach(mostrar);
+
+        function mostrar(valor) {
+
+            console.log(valor)
+
+        }
+
+
+    </script>
+</body>
+
+</html>

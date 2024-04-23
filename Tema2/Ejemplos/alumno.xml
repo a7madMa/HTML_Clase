@@ -1,0 +1,14 @@
+<?xml version ="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE alumno SYSTEM "alumno.dtd">
+
+<alumno>
+	<apellidos>López Roma</apellidos>
+	<nombre> Federico</nombre>
+	<optativa>
+		<informatica />
+
+	</optativa>
+
+
+</alumno>

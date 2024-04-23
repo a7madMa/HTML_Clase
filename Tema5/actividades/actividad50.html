@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 50</title>
+
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+
+        #contenedor {
+            font-family: sans-serif;
+            margin: 0 auto;
+            max-width: 80%;
+            padding: 2rem;
+        }
+
+        .col-izquierda {
+            float: left;
+            max-width: 65%;
+            padding-right: 1rem;
+        }
+
+        .contenedor-foto {
+            position: relative;
+        }
+
+        .evergiven {
+            width: 100%;
+            height: 100%;
+        }
+
+        .bi-play-circle {
+
+            color: white;
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            width: 6%;
+        }
+
+        .pie-pagina {
+            font-size: 0.7rem;
+            color: gray;
+            padding: 0%;
+            margin: 0%;
+            text-align: right;
+        }
+
+        .titulo-noticia-1 {
+            font-family: serif;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0%;
+        }
+
+        .autor {
+            font-size: 0.7rem;
+            margin: 2% 0% 2% 0%;
+        }
+
+        .comentarios {
+            text-decoration: none;
+        }
+
+        .noticia {
+            color: gray;
+            font-size: 0.9rem;
+            margin: 1rem 0rem 1rem 0rem;
+        }
+
+        .col-derecha {
+            float: left;
+            max-width: 30%;
+        }
+
+        .titulo-noticia-2 {
+            margin: 0%;
+            font-weight: bold;
+            margin-bottom: 0%;
+        }
+
+        .noticia-suelta {
+            font-size: 70%;
+            font-weight: bold;
+            margin-right: 2%;
+        }
+
+        .graffiti {
+            float: left;
+        }
+
+        .noticia-2 {
+            margin-left: 4.5rem;
+        }
+
+        .directo {
+            color: red;
+            font-size: 50%;
+            margin-top: 15%;
+            margin-bottom: 2%;
+        }
+
+        .bi-chat-left-fill {
+            color: gray;
+            width: 0.6rem;
+            padding: 0% 0.5% 0% 0.5%;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div id="contenedor">
+        <div class="col-izquierda">
+            <div class="contenedor-foto">
+                <img src="imgs/evergiven.png" alt="Evergiven" class="evergiven">
+                <a href="http://www.ejemplo_video.com" alt="video evergiven"><i class="bi bi-play-circle"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-circle"
+                        viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                        <path
+                            d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
+                    </svg>
+                </a>
+            </div>
+            <p class="pie-pagina">Los remolcadores consiguen mover el 'Even Given', este lunes.</p>
+
+            <p class="titulo-noticia-1">El canal de Suez restablece el tráfico tras conseguir reflotar el buque atascado
+            </p>
+
+            <p class="autor">MARC ESPAÑOL | Ismalia <i class="bi bi-chat-left-fill"> <svg
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chat-left-fill"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                    </svg></i><a href="comentarios" class="comentarios">33</a></p>
+
+            <p class="noticia">Las maniobras logran desencallar el 'Even Given' después de seis días. El presidente
+                egipcio Al Sisi dice que la crisis ha finalizado, pero más de 400 buques siguen a la espera para poder
+                atravesar la vía.</p>
+
+        </div>
+
+        <div class="col-derecha">
+
+            <p class="titulo-noticia-2">El déficit se dispara por encima del 10% del PIB en 2020 por la pandemia</p>
+
+            <p class="autor">LAURA DELLE FEMME | Madrid <i class="bi bi-chat-left-fill"> <svg
+                        xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chat-left-fill"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                    </svg></i><a href="comentarios" class="comentarios">17</a></p>
+
+            <p class="noticia">Los números rojos de las administraciones aumentaron por la caída de ingresos y la subida
+                del gasto ante la crisis.</p>
+
+            <div class="noticia-suelta">
+                <img src="imgs/graffiti.PNG" alt="Graffiti" class="graffiti">
+                <p class="noticia-2">El coronavirus provoca la mayor subida del gasto público en democracia</p>
+            </div>
+            <p class="directo">EN DIRECTO</p>
+
+            <p class="titulo-noticia-2">Madrid vuelve a estar en riesgo muy alto al superar los 250 casos por 100.000
+                habitantes
+            </p>
+
+            <p class="noticia">Sanidad comunica 15.501 nuevos contagios por coronavirus y 189 muertes desde el viernes.
+            </p>
+
+
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>

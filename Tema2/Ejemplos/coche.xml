@@ -1,0 +1,15 @@
+<?xml version ="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE coche SYSTEM "coche.dtd">
+
+<coche>
+	<marca> Renault</marca>
+	<modelo> Clio</modelo>
+	<ocasion />
+	<combustible>
+	<gasolina/>
+	</combustible>
+	<extra>Asientos calefactados</extra>
+	<extra>Elevalunas eléctrico</extra>
+
+</coche>

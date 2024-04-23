@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Queremos definir un xml para introducir el horario de clases usando 
+	namespaces. Define un namespace para el mismo y diseña (y rellena) un xml 
+	donde conste toda la información necesaria de tu horario de clases con el 
+	nombre horario.xml. -->
+
+
+<horario xmnls= "http://www.iessonferrer.net/horario">
+	<lunes>
+		<clase hora="15:10" />
+		<fol hora="16:05" />
+		<SI hora="17:00" />
+		<SI hora="17:55" />
+		<clase>FOL</clase>
+		<clase>FOL</clase>
+		<clase>SI</clase>
+		<clase>SI</clase>
+		<clase>BD</clase>
+		<clase>BD</clase>
+
+	</lunes>
+
+	<martes>
+		<clase>FOL</clase>
+		<clase>FOL</clase>
+		<clase>SI</clase>
+		<clase>SI</clase>
+		<clase>BD</clase>
+		<clase>BD</clase>
+
+	</martes>
+
+	<miercoles>
+		<clase>FOL</clase>
+		<clase>FOL</clase>
+		<clase>SI</clase>
+		<clase>SI</clase>
+		<clase>BD</clase>
+		<clase>BD</clase>
+
+
+
+	</miercoles>
+	<jueves>
+		<clase>FOL</clase>
+		<clase>FOL</clase>
+		<clase>SI</clase>
+		<clase>SI</clase>
+		<clase>BD</clase>
+		<clase>BD</clase>
+
+	</jueves>
+
+	<viernes>
+		<clase>FOL</clase>
+		<clase>FOL</clase>
+	<clase>SI</clase>
+		<clase>SI</clase>
+		<clase>BD</clase>
+		<clase>BD</clase>
+
+	</viernes>
+
+
+
+</horario>
