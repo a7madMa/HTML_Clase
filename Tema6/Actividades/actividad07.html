@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 7</title>
+</head>
+<body>
+    
+    <h1>Actividad 7</h1>
+    <p> Crea un programa para saber si un número (pedido previamente), es
+        impar o par. Hay que poder pedir tantos números como el usuario desee.</p>
+
+        <script>
+            function checkNumber() {
+                var number = prompt("Enter a number:"); // Prompt the user to enter a number
+                if (number % 2 === 0) {
+                    alert(number + " is even."); // Display a message if the number is even
+                } else {
+                    alert(number + " is odd."); // Display a message if the number is odd
+                }
+            }
+
+            // Call the checkNumber function whenever the user wants to input a number
+            while (true) {
+                checkNumber();
+                var continueInput = confirm("Do you want to enter another number?"); // Ask the user if they want to continue
+                if (!continueInput) {
+                    break; // Exit the loop if the user doesn't want to continue
+                }
+            }
+        </script>
+</body>
+</html>
