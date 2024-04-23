@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad 4</title>
 </head>
+
 <body>
     <h1>Actividad 4</h1>
     <p>Escribe un programa que solicite tu nombre, tu edad, tu estatura y tu
-estado civil (casado o soltero). Después debe mostrar estos datos en una misma
-línea si el estado civil está casado, y en columna si el estado civil es soltero.
-(resultado por consola).</p>
-    <script>
-    var nombre = prompt("Ingrese su nombre:");
-    var edad = prompt("Ingrese su edad:");
-    var estatura = prompt("Ingrese su estatura:");
-    var estadoCivil = prompt("Ingrese su estado civil (casado o soltero):");
+        estado civil (casado o soltero). Después debe mostrar estos datos en una misma
+        línea si el estado civil está casado, y en columna si el estado civil es soltero.
+        (resultado por consola).</p>
 
-    if (estadoCivil === "casado") {
-        console.log(nombre + ", " + edad + " años, " + estatura + " cm, " + estadoCivil);
-    } else if (estadoCivil === "soltero") {
-        console.log(nombre);
-        console.log(edad + " años");
-        console.log(estatura + " cm");
-        console.log(estadoCivil);
-    } else {
-        console.log("Estado civil inválido");
-    }
+    <script>
+        var nombre = prompt("Ingrese su nombre:");
+        var edad = prompt("Ingrese su edad:");
+        var estatura = prompt("Ingrese su estatura:");
+        var estadoCivil = prompt("Ingrese su estado civil (casado o soltero):");
+
+        if (estadoCivil === "casado") {
+            console.log(nombre + ", " + edad + " años, " + estatura + " cm, " + estadoCivil);
+        } else if (estadoCivil === "soltero") {
+            console.log(nombre);
+            console.log(edad + " años");
+            console.log(estatura + " cm");
+            console.log(estadoCivil);
+        } else {
+            console.log("Estado civil inválido");
+        }
     </script>
 </body>
+
 </html>
