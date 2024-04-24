@@ -13,9 +13,17 @@
         consola el texto de forma inversa</p>
     <script>
 
-        var texto = "Hello, world!";
-        var textoInverso = texto.split('').reverse().join('');
+        let texto = "Hello, world!";
+        // let textoInverso = texto.split('').reverse().join('');
+        // console.log(textoInverso);
+
+        let textInverso = "";
+        for (let i = texto.length - 1; i >= 0; i--) {
+            textoInverso += texto.charAt[i];
+        }
         console.log(textoInverso);
+
+
     </script>
 
 </body>
