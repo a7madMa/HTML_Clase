@@ -9,9 +9,29 @@
 
 <body>
 
+    <h1>Ejercicios de JavaScript.</h1>
+
+    <p>Escribe un programa que solicite tres números e imprima en la consola el número más pequeño</p>
+
     <script>
 
+        console.log("Comparador de números.");
+        let num1 = prompt("Escribe el primer número.");
+        let num2 = prompt("Escribe el segundo número.");
+        let num3 = prompt("Escribe el tercer número.");
+
+        if (num1 > num2 && num1 > num3) {
+            console.log("El primer número es el mayor = " + num1 + " > " + num2 + ", " + num3 + ".");
+        } else if (num2 > num1 && num2 > num3) {
+            console.log("El segundo número es el mayor = " + num2 + " > " + num1 + ", " + num3 + ".");
+        } else {
+            console.log("El tercer número es el mayor = " + num3 + " > " + num1 + ", " + num2 + ".");
+        }
+
+        console.log("Carlos el mejor.");
+
     </script>
+
 </body>
 
 </html>
