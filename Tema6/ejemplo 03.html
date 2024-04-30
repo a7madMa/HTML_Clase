@@ -17,42 +17,39 @@
 </head>
 
 <body>
-
-    <h1>EL DOM</h1>
+    <h1>El DOM</h1>
     <h2 id="encabezado">Encabezado temporal</h2>
 
-    <p class="verde">Éste es el parrafo 1 </p>
-    <p class="verde">Éste es el parrafo 2 </p>
-    <p class="azul">Éste es el parrafo 3 </p>
-
+    <p class="verde">Éste es el párrafo 1</p>
+    <p class="verde">Éste es el párrafo 2</p>
+    <p class="azul">Éste es el párrafo 3</p>
 
     <script>
         "use strict"
 
         let parrafosVerdes = document.getElementsByClassName("verde");
 
-        parrafosVerdes[0].innerHTML = "Texto nuevos";
+        parrafosVerdes[0].innerHTML = "Texto nuevo";
 
         let parrafoAzul = document.querySelector("p.azul");
         parrafoAzul.innerHTML = "Texto nuevo usando querySelector()";
 
         parrafosVerdes = document.querySelectorAll("p.verde");
 
-        //   for (let parrafo of parrafosVerdes) {
-        //      parrafo.innerHTML = "Nuevo texto dede querySelectorAll"
-        //  }
+        // for(let parrafo of parrafosVerdes){
+        //     parrafo.innerHTML = "Nuevo texto desde querySelectorAll";
+        // }
 
-        // parrafosVerdes.forEach(function (parrafo) {
-        //     parrafo.innerHTML = "Nuevo texto dede querySelectorAll"
-
-        // })
+        // parrafosVerdes.forEach(function(parrafo){
+        //     parrafo.innerHTML = "Nuevo texto desde querySelectorAll";
+        // });
 
         parrafosVerdes.forEach(parrafo => {
-            parrafo.innerHTML = "Nuevo texto dede querySelectorAll"
+            parrafo.innerHTML = "Nuevo texto desde querySelectorAll";
         });
 
-    </script>
 
+    </script>
 </body>
 
 </html>

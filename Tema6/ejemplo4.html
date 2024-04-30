@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 4</title>
+    <style>
+        img{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Modificar atributos</h1>
+
+    <img src="imgs/arquitectura/castillo-san-olaf.jpg" onclick="cambiarBorde()" alt="Castillo de San Olaf">
+
+    <script>
+        // console.log(typeof document.getElementsByTagName("img"));
+        document.getElementsByTagName("img")[0].src="imgs/arquitectura/castillo-bellver.jpg";
+
+        document.getElementsByTagName("img")[0].style.border = "5px solid red";
+
+        function cambiarBorde(){
+            // Cambiamos el color del borde a verde.
+            document.getElementsByTagName("img")[0].style.border = "5px solid green";
+        }
+
+    </script>
+
+</body>
+</html>

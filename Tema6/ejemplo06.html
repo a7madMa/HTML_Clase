@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 6</title>
+    <style>
+        img{
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabajando con el DOM</h1>
+
+    <p class="texto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta vero laudantium omnis iure voluptatibus facilis dolore dignissimos itaque, cupiditate maxime?</p>
+
+    <img src="imgs/arte/Noche estrellada - Van Gogh.jpg" alt="Noche estrellada">
+
+    <img src="imgs/arte/Paseo a la orilla del mar - Sorolla.jpg" onmouseover="ponerBorde(this)" onmouseout="quitarBorde(this)" alt="Paseo a la orilla del mar">
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ab fugit quaerat rerum veniam vero, deleniti fuga distinctio assumenda voluptatibus.</p>
+
+    <script>
+        document.getElementsByClassName("texto")[0].addEventListener("click", espaciar);
+
+        document.querySelector("img").addEventListener("click", ocultar)
+        
+        function espaciar(){
+            document.getElementsByClassName("texto")[0].style.letterSpacing = "5px";
+        }
+
+        function ocultar(){
+            //document.querySelector("img").style.display = "none";
+            document.querySelector("img").style.visibility = "hidden";
+        }
+
+        function ponerBorde(elemento){
+            elemento.style.border = "5px solid black";
+        }
+
+        function quitarBorde(elemento){
+            elemento.style.border = "none";
+        }
+
+
+    </script>
+
+</body>
+</html>
