@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo 07</title>
+    <title>Ejemplo 7</title>
     <style>
         label {
             margin-bottom: 7px;
             display: block;
-
         }
 
         input {
@@ -23,30 +22,41 @@
     <h1>Eventos onfocus y onfocusout</h1>
 
     <form action="" method="post">
-
         <label for="usuario">Usuario</label>
-        <input type="text" id="usuario" name="usuario" placeholder="Usuario...">
+        <input type="text" id="usuario" name="usuario" placeholder="Usuario">
 
         <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Contraseña...">
+        <input type="password" id="password" name="password" placeholder="Contraseña">
 
         <input type="submit" value="Enviar">
-
     </form>
+
     <script>
-        document.getElementById("usuario").onfocus = resaltar;
-        document.getElementById("usuario").onblur = blanquear;
+        "use strict"
 
-        function resaltar() {
-            document.getElementById("usuario").style.backgroundColor = "palegreen";
+        // Creamos una variables que apunten a los inputs de usuario y password. Para no estar repitiendo siempre lo de "document.get...".
+        let usuario = document.getElementById("usuario");
+        let password = document.getElementById("password");
+
+        // Añadimos dos listeners al input usuario para que se llame a la función resaltar() cuando reciba el foco, y a la función blanquear() cuando lo pierda.
+
+        // Al llamar a las funciones resaltar() y blanquear() pasamos una referencia del input al que queremos aplicárselo. Esto hay que hacerlo a través de una función sin nombre que llama a resaltar() o blanquear().
+        usuario.addEventListener('focus', function () { resaltar(usuario) });
+        usuario.addEventListener('focusout', function () { blanquear(usuario) });
+
+        // Añadimos dos listeners al input password para que se llame a la función resaltar() cuando reciba el foco, y a la función blanquear() cuando lo pierda.
+
+        // Al llamar a las funciones resaltar() y blanquear() pasamos una referencia del input al que queremos aplicárselo. Esto hay que hacerlo a través de una función sin nombre que llama a resaltar() o blanquear().
+        password.addEventListener('focus', function () { resaltar(password) });
+        password.addEventListener('focusout', function () { blanquear(password) });
+
+        function resaltar(elemento) {
+            elemento.style.backgroundColor = "palegreen";
         }
 
-        function blanquear() {
-            document.getElementById("usuario").style.backgroundColor = "white";
+        function blanquear(elemento) {
+            elemento.style.backgroundColor = "white";
         }
-    </script>
-
-
     </script>
 </body>
 
