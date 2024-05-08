@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 10</title>
+</head>
+
+<body>
+    <h1>Añadir un div al DOM</h1>
+    <p></p>
+
+
+    <script>
+
+        // EJERCICIO: Hacer que los elementos de abajo aparezcan tras pulsar un botón (input type button).
+
+        "use script"
+        // Creamos un nuevo div.
+        let nuevoDiv = document.createElement("div");
+
+        // Lo configuramos.
+        nuevoDiv.style.width = "100px";
+        nuevoDiv.style.height = "60px";
+        nuevoDiv.style.backgroundColor = "purple";
+
+        // Lo añadimos al DOM al final.
+        document.body.appendChild(nuevoDiv);
+
+        // Creamos un nuevo párrafo
+        let nuevoParrafo = document.createElement("parrafo");
+
+        // Lo configuramos
+        nuevoParrafo.innerHTML = "Un video mas mi gente, pa perder el tiempo";
+        nuevoParrafo.style.color = "white";
+
+        // Lo añadimos al div anterior
+        nuevoDiv.appendChild(nuevoParrafo);
+
+
+    </script>
+</body>
+
+</html>
