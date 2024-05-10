@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1 id="encabezado">Añadir elemento a continuación de otro</h1>
+
+    <p>Este párrafo esta hecho mediante HTML.</p>
+
+
+    <script>
+        "use strict"
+        let encabezado = document.getElementById("encabezado");
+
+        // Parrafo que queremos añadir
+        let nuevoParrafo = document.createElement("p");
+        // Para ponerle texto usamos
+        nuevoParrafo.innerText = "Este párrafo lo ha creado JavaScript";
+
+        // Añadimos el nuevo párrafo a continuación del encabezado. No como hijo del encabezado, sino como hermano (es decir a la misma altura).
+        encabezado.insertAdjacentElement('afterend', nuevoParrafo);
+
+
+    </script>
+</body>
+
+</html>S

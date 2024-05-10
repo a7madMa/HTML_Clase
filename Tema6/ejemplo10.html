@@ -9,35 +9,69 @@
 
 <body>
     <h1>Añadir un div al DOM</h1>
-    <p></p>
 
+    <button id="botonMostrar">Mostrar div extra</button>
 
     <script>
+        "use strict"
 
-        // EJERCICIO: Hacer que los elementos de abajo aparezcan tras pulsar un botón (input type button).
+        // Variable semáforo para saber si hay que añadir o eliminar el div.
+        let pulsarAnyadir = true;
 
-        "use script"
-        // Creamos un nuevo div.
-        let nuevoDiv = document.createElement("div");
+        let boton = document.getElementById("botonMostrar");
 
-        // Lo configuramos.
-        nuevoDiv.style.width = "100px";
-        nuevoDiv.style.height = "60px";
-        nuevoDiv.style.backgroundColor = "purple";
+        boton.addEventListener('click', modificar);
 
-        // Lo añadimos al DOM al final.
-        document.body.appendChild(nuevoDiv);
+        function modificar() {
+            if (pulsarAnyadir) {
+                anyadir();
+            } else {
+                eliminar();
+            }
+        }
 
-        // Creamos un nuevo párrafo
-        let nuevoParrafo = document.createElement("parrafo");
+        function anyadir() {
 
-        // Lo configuramos
-        nuevoParrafo.innerHTML = "Un video mas mi gente, pa perder el tiempo";
-        nuevoParrafo.style.color = "white";
+            console.log("anyadir()");
 
-        // Lo añadimos al div anterior
-        nuevoDiv.appendChild(nuevoParrafo);
+            // Creamos un nuevo div.
+            let nuevoDiv = document.createElement("div");
+            nuevoDiv.id = "nuevoDiv";
 
+            // Lo configuramos.
+            nuevoDiv.style.width = "100px";
+            nuevoDiv.style.height = "60px";
+            nuevoDiv.style.backgroundColor = "yellow";
+
+            // Lo añadimos al DOM al final.
+            document.body.appendChild(nuevoDiv);
+
+            // Creamos un nuevo párrafo
+            let nuevoParrafo = document.createElement("p");
+
+            // Lo configuramos.
+            nuevoParrafo.innerText = "Esto es un nuevo texto.";
+
+            // Lo añadimos al div anterior.
+            nuevoDiv.appendChild(nuevoParrafo);
+
+            // Cambiamos el texto del botón.
+            boton.innerText = "Ocultar div extra";
+            pulsarAnyadir = false;
+
+        }
+
+        function eliminar() {
+
+            console.log("anyadir()");
+
+            // Accedemos al nuevo div y lo eliminamos.
+            document.getElementById("nuevoDiv").remove();
+
+            // Cambiamos el texto del botón y la variable anyadir.
+            boton.innerText = "Mostrar div extra";
+            pulsarAnyadir = true;
+        }
 
     </script>
 </body>
