@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 12</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.6rem;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Validación de formularios</h1>
+    <form action="http://example.com/" onsubmit="return validar()">
+        <label for="nombre">Nombre</label><br>
+        <input type="text" name="nombre" id="nombre"><span class="error">*Obligatorio</span><br><br>
+        <label for="apellidos">Apellidos</label><br>
+        <input type="text" name="apellidos" id="apellidos"><span class="error">*Obligatorio</span><br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+
+    <script>
+
+        "use strict"
+
+        function validar() {
+
+            // El value devuelve la cadena que se haya introducido dentro del input en forma de String
+            let nombre = document.getElementById('nombre').value;
+            let apellidos = document.getElementById('apellidos').value;
+
+
+            if (nombre.length == 0 || apellidos.length === 0) {
+
+                // Hacemos visibles los mensajes de error, ya que el usuario ha dejado alguna casilla vacía
+                for (let elemento of document.getElementsByClassName('error')) {
+                    elemento.style.visibility = "visible";
+                }
+
+                // Devolvemos false  para que no se envíe el formulario, ya que no está completo
+                return flase;
+            }
+            // Devolvemos true para que se envie el formulario, ya que está completo.
+
+            return true;
+
+        }
+
+    </script>
+
+</html>

@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad 2</title>
     <style>
-        div {
+        button {
             display: inline-block;
             margin-right: 20px;
+            border: none;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
         }
 
         .wiki {
@@ -27,8 +34,11 @@
         }
 
         .seleccion {
+            background-color: rgb(255, 255, 124);
+            padding: 15px 120px;
+            display: inline-block;
 
-            
+
         }
     </style>
 </head>
@@ -38,18 +48,35 @@
     <h1>Elegir destino del enlace</h1>
     <p>Pulsa uno de estos tres colores para elegir el destino del link que aparece más abajo. </p>
 
-    <div class="wiki">Wikipedia</div>
-    <div class="green">Greenpeace</div>
-    <div class="roja">Cruz Roja</div>
+    <button class="wiki">Wikipedia</button>
+    <button class="green">Greenpeace</button>
+    <button class="roja">Cruz Roja</button>
 
     <p>Pulsa el siguiente link pra dirigirte a la web elegida:</p>
 
-    <div class="seleccion">Ir a </div>
-
-
+    <a id="seleccion" class="seleccion" href="#" target="_blank">Ir a </a>
 
     <script>
+        "use strict"
 
+        const buttons = document.querySelectorAll('button');
+        const linkElement = document.getElementById('seleccion');
+
+        buttons.forEach(button => {
+            button.onclick = function () {
+                let text = this.textContent;
+                linkElement.textContent = 'Ir a ' + text;
+
+                if (text == 'Wikipedia') {
+                    linkElement.href = 'https://www.wikipedia.org/';
+                } else if (text == 'Greenpeace') {
+                    linkElement.href = 'https://www.greenpeace.org/';
+                } else {
+                    (text == 'Cruz Roja')
+                    linkElement.href = 'https://www.cruzroja.es/';
+                }
+            }
+        });
     </script>
 </body>
 
