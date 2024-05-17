@@ -1,0 +1,12 @@
+{
+    "familia": [
+        {
+            "padre": "Pedro Alvarez",
+            "madre": "Luisa Robles",
+            "hijos": [
+                "Manuel Alvarez",
+                "Natalia Alvarez"
+            ]
+        }
+    ]
+}

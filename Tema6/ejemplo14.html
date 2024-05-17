@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasar de objeto a JSON</title>
+</head>
+
+<body>
+
+    <h1>Pasar de objeto a JSON</h1>
+
+    <script>
+        "use strict"
+
+        let mascota = {
+            nombre: 'Milú',
+            propietario: 'Antonio Fernández'
+        };
+
+        console.log(mascota);
+
+        let textoJSON = JSON.stringify(mascota);
+        console.log(textoJSON);
+
+    </script>
+</body>
+
+</html>
