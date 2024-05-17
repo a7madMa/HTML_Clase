@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo 15 Open Weather Map</title>
+    <title>Open Weather Map</title>
 </head>
 
 <body>
@@ -13,40 +13,40 @@
     <script>
         "use strict"
 
-        let url = " https://api.openweathermap.org/data/2.5/weather?q=Ourense&appid=942522b99ebf9764c3b4d4794a23d655&units=metric";
+        let url = "https://api.openweathermap.org/data/2.5/weather?q=Ourense&appid=7dcc6bb908fc23a49ee9184422cc7cfd&units=metric";
 
         fetch(url)
-            // Cuando reciba los datos entonces haz lo que te pona (Se suele pasar una función)
             .then(function (respuesta) {
                 return respuesta.json();
-
             })
             .then(function (respuestaJSON) {
                 let ciudad = respuestaJSON.name;
                 let temperatura = respuestaJSON.main.temp;
+
                 let salidaSol = respuestaJSON.sys.sunrise;
-                let horaSalidaSol = new Date(salidaSol * 1000);
-                let StringHoraSalidaSol = horaSalidaSol.getHours() + ":" + horaSalidaSol.getMinutes()
 
                 let puestaSol = respuestaJSON.sys.sunset;
-                let horaPuestaSol = new Date(puestaSol * 1000);
-                let StringHoraPuestaSol = horaPuestaSol.getHours() + ":" + horaPuestaSol.getMinutes()
+
+
 
 
                 console.log(`Ciudad: ${ciudad}`);
                 console.log(`Temperatura: ${temperatura}ºC`);
-                console.log(`Amanecer: ${StringHoraSalidaSol}`);
-                console.log(`Puesta del sol: ${StringHoraPuestaSOl}`);
+                console.log(`Amanecer: ${epochAFecha(salidaSol)}`);
+                console.log(`Anochecer: ${epochAFecha(puestaSol)}`);
+
+
             })
             .catch(function () {
-                console.log("Error en la aplicación de datos.")
+                console.log("Error en la petición de datos.");
             });
 
-
-
+        function epochAFecha(epoch) {
+            let tiempo = new Date(epoch * 1000);
+            return tiempo.getHours() + ":" + tiempo.getMinutes();
+        }
 
     </script>
-
 </body>
 
 </html>
