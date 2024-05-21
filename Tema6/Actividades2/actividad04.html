@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4</title>
+    <style>
+        #rectangulo {
+            border: 3px solid #DEB887;
+            background-color: green;
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Seleccionar un color</h1>
+    <p>Elige un color, y se aplicará al rectángulo de abajo:</p>
+
+
+    <select name="colores" id="colores" onchange="cambiarColor()">
+        <option value="green">Verde</option>
+        <option value="purple">Púrpura</option>
+        <option value="yellow">Amarillo</option>
+        <option value="red">Rojo</option>
+        <option value="blue">Azul</option>
+    </select>
+
+    <p>Color elegido:</p>
+    <div id="rectangulo"></div>
+
+    <script>
+        function cambiarColor() {
+            let colorSeleccionado = document.getElementById('colores').value;
+            document.getElementById('rectangulo').style.backgroundColor = colorSeleccionado;
+        }
+
+        // Esta función es para que funcione bien en Firefox.
+        window.onload = function () {
+            document.getElementById('colores').value = 'green';
+            document.getElementById('rectangulo').style.backgroundColor = 'green';
+
+        };
+
+
+
+
+
+    </script>
+</body>
+
+</html>

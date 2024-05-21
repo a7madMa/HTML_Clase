@@ -10,6 +10,11 @@
 <body>
     <h1>Open Weather Map</h1>
 
+    <h2>El tiempo en <span id="ciudad"></span> es: </h2>
+    <p> Temperatura actual <span id="temperatura"></span> ºC</p>
+    <p>La salida del sol es a las <span id="salidaDeSol"></span> horas</p>
+    <p>La puesta del sol es a las <span id="puestaDeSol"></span> horas</p>
+
     <script>
         "use strict"
 
@@ -27,13 +32,19 @@
 
                 let puestaSol = respuestaJSON.sys.sunset;
 
-
-
-
                 console.log(`Ciudad: ${ciudad}`);
+                document.getElementById('ciudad').innerHTML = ciudad;
+
                 console.log(`Temperatura: ${temperatura}ºC`);
+                document.getElementById('temperatura').innerHTML = temperatura;
+
+
                 console.log(`Amanecer: ${epochAFecha(salidaSol)}`);
+                document.getElementById('salidaDeSol').innerHTML = epochAFecha(salidaSol)
+
                 console.log(`Anochecer: ${epochAFecha(puestaSol)}`);
+                document.getElementById('puestaDeSol').innerHTML = epochAFecha(puestaSol)
+
 
 
             })
@@ -44,6 +55,8 @@
         function epochAFecha(epoch) {
             let tiempo = new Date(epoch * 1000);
             return tiempo.getHours() + ":" + tiempo.getMinutes();
+
+
         }
 
     </script>
