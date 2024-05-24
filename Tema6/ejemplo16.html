@@ -10,21 +10,23 @@
 <body>
     <h1>Open Weather Map</h1>
 
-    <h2>El tiempo en <span id="ciudad"></span></h2>
+    <!-- <h2>El tiempo en <span id="ciudad"></span></h2>
     <p>Temperatura actual: <span id="temperatura"></span></p>
     <p>Amanece a las <span id="salidaSol"></span></p>
     <p>Anochece a las <span id="puestaSol"></span></p>
     <p>La presión es de: <span id="presion"></span> milibares</p>
-    <p>La humedad actual es del: <span id="humedad"></span> %</p>
+    <p>La humedad actual es del: <span id="humedad"></span> %</p> -->
 
 
 
     <script>
         "use strict"
 
-        elegirCiudad("tailandia");
+        let ciudades = ["Palma", "Alicante", "Siria", "Ares", "Tokyo", "Manila", "Oprto", "Paris", "Buenos aires"];
 
-        function elegirCiudad(localizacion) {
+        ciudades.forEach(ciudad => tiempo(ciudad));
+
+        function tiempo(localizacion) {
             let url = `https://api.openweathermap.org/data/2.5/weather?q=${localizacion}&appid=7dcc6bb908fc23a49ee9184422cc7cfd&units=metric`;
 
             fetch(url)
@@ -47,24 +49,29 @@
 
                     let humedad = respuestaJSON.main.humidity;
 
-                    console.log(`Ciudad: ${ciudad}`);
-                    document.getElementById('ciudad').innerHTML = ciudad;
+                    let ciudadElement = document.createElement('h2');
+                    ciudadElement.textContent = `El tiempo en: ${ciudad}`;
+                    document.body.appendChild(ciudadElement);
 
-                    console.log(`Temperatura: ${temperatura}ºC`);
-                    document.getElementById('temperatura').innerHTML = temperatura + "ºC";
-                    document.getElementById('temperatura').style.color = colorTemp(temperatura);
+                    let temperaturaElement = document.createElement('p');
+                    temperaturaElement.textContent = `Temperatura: ${temperatura}ºC`;
+                    document.body.appendChild(temperaturaElement);
 
-                    console.log(`Amanecer: ${epochAFecha(salidaSol)}`);
-                    document.getElementById("salidaSol").innerHTML = epochAFecha(salidaSol);
+                    let salidaSolElement = document.createElement('p');
+                    salidaSolElement.textContent = `Amanecer: ${epochAFecha(salidaSol)}`;
+                    document.body.appendChild(salidaSolElement);
 
-                    console.log(`Anochecer: ${epochAFecha(puestaSol)}`);
-                    document.getElementById("puestaSol").innerHTML = epochAFecha(puestaSol);
+                    let puestaSolElement = document.createElement('p');
+                    puestaSolElement.textContent = `Anochecer: ${epochAFecha(puestaSol)}`;
+                    document.body.appendChild(puestaSolElement);
 
-                    console.log(`Presión: ${presion}`)
-                    document.getElementById('presion').innerHTML = presion;
+                    let presionElement = document.createElement('p');
+                    presionElement.textContent = `Presión: ${presion} mbar`;
+                    document.body.appendChild(presionElement);
 
-                    console.log(`humedad:${humedad}`)
-                    document.getElementById('humedad').innerHTML = humedad;
+                    let humedadElement = document.createElement('p');
+                    humedadElement.textContent = `Humedad: ${humedad} %`;
+                    document.body.appendChild(humedadElement);
 
                 })
                 .catch(function () {
@@ -89,10 +96,6 @@
                 return "red";
             }
         }
-
-
-
-
 
     </script>
 </body>
