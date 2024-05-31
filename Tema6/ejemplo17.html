@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 17</title>
+</head>
+
+<body>
+    <h1>The Movie DB</h1>
+
+    <script>
+
+
+        const options = {
+            method: 'GET',
+            headers: {
+                accept: 'application/json',
+                Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwOWM3MDYxM2RlNzdkMTM4YTNhNzNlZmQ3ZjJhNmI0MSIsInN1YiI6IjY2NTBiNzY2ZjM4Y2E0MjA3N2NiMmU0MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ESPiR0r8D5FqF27v8wrVY1fsOVjm1n3L03gpYbN5XEE'
+            }
+        };
+
+        fetch('https://api.themoviedb.org/3/search/person?query=Tom%20Hanks&include_adult=false&language=en-US&page=1', options)
+            .then(response => response.json())
+            .then(response => {
+                let name = response.results[0].name;
+                console.log("Nombre: " + name);
+
+                let id = response.results[0].id;
+                console.log("id:" + id);
+
+                let peliculas = response.results[0].known_for;
+
+                console.log("----------------------");
+                for (let pelicula of peliculas) {
+                    console.log(pelicula.original_title);
+
+                    let posterPath = pelicula.poster_path;
+                    let posterUrl = `https://image.tmdb.org/t/p/w500${posterPath}`;
+                    let posterImg = document.createElement('img');
+                    posterImg.src = posterUrl;
+                    document.body.appendChild(posterImg);
+                }
+
+
+            })
+            .catch(err => console.error(err));
+
+        const options = {
+            method: 'GET',
+            headers: {
+                accept: 'application/json',
+                Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwOWM3MDYxM2RlNzdkMTM4YTNhNzNlZmQ3ZjJhNmI0MSIsInN1YiI6IjY2NTBiNzY2ZjM4Y2E0MjA3N2NiMmU0MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ESPiR0r8D5FqF27v8wrVY1fsOVjm1n3L03gpYbN5XEE'
+            }
+        };
+
+        fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', options)
+            .then(response => response.json())
+            .then(response => {
+                let
+
+            })
+            .catch(err => console.error(err));
+
+    </script>
+
+</body>
+
+</html>

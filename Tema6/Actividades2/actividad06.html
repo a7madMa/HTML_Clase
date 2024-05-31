@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 6</title>
+    <title>Actividad 1</title>
     <style>
         img {
             border: 5px solid palegreen;
@@ -20,6 +20,8 @@
     <img src="imgs(1)/imgs/hamsters/w150px/hamster01.png" alt="hamster">
 
     <script>
+        "use script"
+
         function aleatorio(event) {
             let numeroRandom = Math.floor(Math.random() * 12) + 1;
             // Convertir el número a una cadena y agregar un cero al principio si es necesario
@@ -29,6 +31,7 @@
 
 
         }
+
         function cambiarColorBorde(event) {
             // Generar un color aleatorio en formato hexadecimal
             let color = '#' + Math.floor(Math.random() * 16777215).toString(16);
@@ -37,9 +40,9 @@
 
         document.querySelector('img').addEventListener('click', cambiarColorBorde);
 
+
         document.querySelector('img').addEventListener('click', aleatorio);
-
-
-
     </script>
 </body>
+
+</html>
